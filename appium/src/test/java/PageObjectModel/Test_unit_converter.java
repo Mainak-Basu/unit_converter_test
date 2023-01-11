@@ -1,13 +1,10 @@
 package PageObjectModel;
-import java.util.concurrent.TimeUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 public class Test_unit_converter extends Base_class{
-@SuppressWarnings("deprecation")
 @Test 
 	public void test_uc() {
 	 Unit_converter_objects uc= new Unit_converter_objects(driver);
-	 driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 	 uc.clickoninput();
 	 uc.clickonnum1();
 	 uc.clickonselector();

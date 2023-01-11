@@ -5,7 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class Paystore_Objects {
+public class Paystore_Objects extends Base_class{
 	
 		public Paystore_Objects(AndroidDriver driver) {
 			
@@ -33,7 +33,8 @@ public class Paystore_Objects {
       public void tap3() {
     	  install.click();
       }
-      public void tap4() {
+      
+	public void clickopen() {
     	  open.click();
       }
 }     
