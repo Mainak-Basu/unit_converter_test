@@ -1,13 +1,18 @@
 package pages;
+import java.time.Duration;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class Paystore_Objects{
-	
+	private AndroidDriver driver;
 		public Paystore_Objects(AndroidDriver driver) {
-			
+		this.driver=driver;	
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
       @AndroidFindBy(xpath="//android.view.View[@content-desc=\"Search Google Play\"]")
@@ -34,6 +39,8 @@ public class Paystore_Objects{
       }
       
 	public void clickopen() {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(200));
+		wait.until(ExpectedConditions.visibilityOf(open));
     	  open.click();
       }
 }     

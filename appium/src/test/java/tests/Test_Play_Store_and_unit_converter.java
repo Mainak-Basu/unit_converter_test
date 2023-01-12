@@ -1,21 +1,19 @@
 package tests;
-import java.util.concurrent.TimeUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import generic_utilities.Base_class;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import pages.Paystore_Objects;
 import pages.Unit_converter_objects;
-import resources.Base_class;
 public class Test_Play_Store_and_unit_converter extends Base_class{
 
 
 @Feature("App search")
 @Story("Unit converter searh")
 @Description("PlayStore verification")
-	@SuppressWarnings("deprecation")
 	@Test(priority=0)
     public void playstore_test(){
 		Allure.step("Open Play Store app.");
@@ -29,7 +27,6 @@ public class Test_Play_Store_and_unit_converter extends Base_class{
     	play.tap2();
     	Allure.step("Click on install button");
     	play.tap3();
-    	driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
     	Allure.step("Click on open button when it appears");
         play.clickopen();
     }
@@ -37,11 +34,9 @@ public class Test_Play_Store_and_unit_converter extends Base_class{
 @Feature("App operations")
 @Story("Unit converter operations")
 @Description("conversion verifications")
-	@SuppressWarnings("deprecation")
 	@Test (priority=1)
 	public void test_uc() {
 	 Unit_converter_objects uc= new Unit_converter_objects(driver);
-	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	 Allure.step("Click on input tab.");
 	 uc.clickoninput();
 	 Allure.step("Click on one.");

@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -37,6 +40,8 @@ public class Unit_converter_objects {
 	public WebElement third;
 	
 	public void clickoninput() {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(200));
+		wait.until(ExpectedConditions.visibilityOf(inputbox));
 		inputbox.click();
 	}
 	public void clickonnum1() {

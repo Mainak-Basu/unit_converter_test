@@ -1,4 +1,4 @@
-package resources;
+package generic_utilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
