@@ -4,9 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import resources.Base_class;
-
-public class Paystore_Objects extends Base_class{
+public class Paystore_Objects{
 	
 		public Paystore_Objects(AndroidDriver driver) {
 			

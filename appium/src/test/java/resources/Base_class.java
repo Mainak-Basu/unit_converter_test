@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 public class Base_class {
-	    private AndroidDriver driver;
+	    public AndroidDriver driver;
 		@BeforeClass
 		public void setup() throws MalformedURLException{
 		DesiredCapabilities dc = new DesiredCapabilities();
@@ -14,16 +14,9 @@ public class Base_class {
 		dc.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Z585R8TSRWQKSGQO");
 		dc.setCapability("noReset", true);
-		//dc.setCapability("appPackage", "com.android.vending");
-		//dc.setCapability("appActivity", "com.google.android.finsky.activities.MainActivity");
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
-	    setDriver(new AndroidDriver(url,dc));
+	   driver = new AndroidDriver(url,dc);
+	   
 		}
-		public AndroidDriver getDriver() {
-			return driver;
-		}
-		public void setDriver(AndroidDriver driver) {
-			this.driver = driver;
-		}
-
+		
 }

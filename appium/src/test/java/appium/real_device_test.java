@@ -1,4 +1,4 @@
-/*package appium;
+package appium;
 
 import java.net.MalformedURLException;
 
@@ -231,4 +231,4 @@ driver.terminateApp("com.android.vending");
 
 }
 
-} */
+} 

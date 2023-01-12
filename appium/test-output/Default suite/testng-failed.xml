@@ -5,7 +5,6 @@
     <classes>
       <class name="tests.Test_Play_Store_and_unit_converter">
         <methods>
-          <include name="playstore_test"/>
           <include name="test_uc"/>
           <include name="setup"/>
         </methods>

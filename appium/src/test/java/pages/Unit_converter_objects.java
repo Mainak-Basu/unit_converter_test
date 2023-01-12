@@ -1,7 +1,6 @@
 package pages;
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
@@ -11,10 +10,11 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class Unit_converter_objects {
 	private AndroidDriver driver;
+	
 	public Unit_converter_objects(AndroidDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-}
+}  
 	@AndroidFindBy(id="kr.sira.unit:id/tab0_input")
     public WebElement inputbox;
 	@AndroidFindBy(id="kr.sira.unit:id/tab0_num1")
