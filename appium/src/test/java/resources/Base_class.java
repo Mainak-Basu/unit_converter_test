@@ -1,4 +1,4 @@
-package PageObjectModel;
+package resources;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 public class Base_class {
-	    AndroidDriver driver;
+	    private AndroidDriver driver;
 		@BeforeClass
 		public void setup() throws MalformedURLException{
 		DesiredCapabilities dc = new DesiredCapabilities();
@@ -17,7 +17,13 @@ public class Base_class {
 		//dc.setCapability("appPackage", "com.android.vending");
 		//dc.setCapability("appActivity", "com.google.android.finsky.activities.MainActivity");
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
-	    driver = new AndroidDriver(url,dc);
+	    setDriver(new AndroidDriver(url,dc));
+		}
+		public AndroidDriver getDriver() {
+			return driver;
+		}
+		public void setDriver(AndroidDriver driver) {
+			this.driver = driver;
 		}
 
 }

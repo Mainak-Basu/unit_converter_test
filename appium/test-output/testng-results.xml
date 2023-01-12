@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-11T15:48:12 IST" name="Default suite" finished-at="2023-01-11T15:49:11 IST" duration-ms="59326">
+  <suite started-at="2023-01-11T18:55:34 IST" name="Default suite" finished-at="2023-01-11T18:57:02 IST" duration-ms="88035">
     <groups>
     </groups>
-    <test started-at="2023-01-11T15:48:12 IST" name="Default test" finished-at="2023-01-11T15:49:11 IST" duration-ms="59326">
-      <class name="PageObjectModel.Test_Play_Store">
-        <test-method is-config="true" signature="setup()[pri:0, instance:PageObjectModel.Test_Play_Store@52e6fdee]" started-at="2023-01-11T15:48:12 IST" name="setup" finished-at="2023-01-11T15:48:20 IST" duration-ms="8612" status="PASS">
+    <test started-at="2023-01-11T18:55:34 IST" name="Default test" finished-at="2023-01-11T18:57:02 IST" duration-ms="88035">
+      <class name="tests.Test_Play_Store_and_unit_converter">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Test_Play_Store_and_unit_converter@49139829]" started-at="2023-01-11T18:55:34 IST" name="setup" finished-at="2023-01-11T18:55:43 IST" duration-ms="9570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="playstore_test()[pri:0, instance:PageObjectModel.Test_Play_Store@52e6fdee]" started-at="2023-01-11T15:48:20 IST" name="playstore_test" finished-at="2023-01-11T15:48:58 IST" duration-ms="38106" status="PASS">
+        <test-method signature="playstore_test()[pri:0, instance:tests.Test_Play_Store_and_unit_converter@49139829]" started-at="2023-01-11T18:55:43 IST" name="playstore_test" finished-at="2023-01-11T18:56:47 IST" duration-ms="63738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- playstore_test -->
-        <test-method signature="test_uc()[pri:1, instance:PageObjectModel.Test_Play_Store@52e6fdee]" started-at="2023-01-11T15:48:58 IST" name="test_uc" finished-at="2023-01-11T15:49:11 IST" duration-ms="12579" status="PASS">
+        <test-method signature="test_uc()[pri:1, instance:tests.Test_Play_Store_and_unit_converter@49139829]" started-at="2023-01-11T18:56:47 IST" name="test_uc" finished-at="2023-01-11T18:57:02 IST" duration-ms="14684" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_uc -->
-      </class> <!-- PageObjectModel.Test_Play_Store -->
+      </class> <!-- tests.Test_Play_Store_and_unit_converter -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
