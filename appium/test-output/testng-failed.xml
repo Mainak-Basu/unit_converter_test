@@ -5,8 +5,10 @@
     <classes>
       <class name="tests.Test_Play_Store_and_unit_converter">
         <methods>
-          <include name="test_uc"/>
           <include name="setup"/>
+          <include name="value_2_test"/>
+          <include name="teardown"/>
+          <include name="value_3_test"/>
         </methods>
       </class> <!-- tests.Test_Play_Store_and_unit_converter -->
     </classes>

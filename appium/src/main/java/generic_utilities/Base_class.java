@@ -1,12 +1,25 @@
 package generic_utilities;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.qameta.allure.Allure;
 public class Base_class {
-	    public AndroidDriver driver;
+	    public static AndroidDriver driver;
 		@BeforeClass
 		public void setup() throws MalformedURLException{
 		DesiredCapabilities dc = new DesiredCapabilities();
@@ -16,7 +29,25 @@ public class Base_class {
 		dc.setCapability("noReset", true);
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 	   driver = new AndroidDriver(url,dc);
-	   
+	   }
+		
+		public void failed_test(String testMethodName, AndroidDriver driver) throws IOException {
+			Base_class.driver=driver;
+			Date d=new Date();
+			SimpleDateFormat sdf=new SimpleDateFormat("MM/DD/Y HH:mm:ss");
+			String date=sdf.format(d);
+			date=date.replace(':', '_');
+	    File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File("C:\\Users\\Fleek\\git\\unitconverter\\appium\\Screenshots\\"+testMethodName+"_"+date+".jpg"));
+		Allure.attachment("Screenshot", new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
+		
+		
 		}
+				
+	@AfterClass
+	public void teardown() {
+		Allure.step("Server closed");
+		driver.quit();
+	}
 		
 }

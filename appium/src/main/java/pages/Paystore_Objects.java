@@ -38,7 +38,7 @@ public class Paystore_Objects{
     	  install.click();
       }
       
-	public void clickopen() {
+	public void wait_till_open_appears_and_then_click_open() {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(200));
 		wait.until(ExpectedConditions.visibilityOf(open));
     	  open.click();

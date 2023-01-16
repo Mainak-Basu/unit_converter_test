@@ -1,13 +1,16 @@
 package tests;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import generic_utilities.Base_class;
+import generic_utilities.CustomListener;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import pages.Paystore_Objects;
 import pages.Unit_converter_objects;
+@Listeners(CustomListener.class)
 public class Test_Play_Store_and_unit_converter extends Base_class{
 
 
@@ -28,7 +31,7 @@ public class Test_Play_Store_and_unit_converter extends Base_class{
     	Allure.step("Click on install button");
     	play.tap3();
     	Allure.step("Click on open button when it appears");
-        play.clickopen();
+        play.wait_till_open_appears_and_then_click_open();
     }
 
 @Feature("App operations")
@@ -48,12 +51,30 @@ public class Test_Play_Store_and_unit_converter extends Base_class{
 	 Allure.step("Click on OK button.");
 	 uc.click_ok_button();
 	 uc.scroll();
+}
+    @Test(priority=2)
+    public void value_1_test(){
+	Unit_converter_objects uc= new Unit_converter_objects(driver);
 	 Allure.step("First verification.");
 	 Assert.assertTrue(uc.verifyfirst());
+	 
+}
+	 @Test(priority=3)
+	 public void value_2_test(){
+	 Unit_converter_objects uc= new Unit_converter_objects(driver);	 
 	 Allure.step("Second verification.");
 	 Assert.assertTrue(uc.verifysecond());
+	 }
+	 @Test(priority=4)
+	 public void value_3_test(){
+	 Unit_converter_objects uc= new Unit_converter_objects(driver);	  
+	 
 	 Allure.step("Third verification.");
 	 Assert.assertTrue(uc.verifythird());
+	 }
+	 
+	 @Test(priority=5)
+	 public void closing_and_uninstalling() {
 	 Allure.step("Closing unit converter app.");
 	 driver.terminateApp("kr.sira.unit");
 	 Allure.step("Uninstalling unit converter app.");

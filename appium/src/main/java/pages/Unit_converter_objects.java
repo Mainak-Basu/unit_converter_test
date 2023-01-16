@@ -71,9 +71,9 @@ public class Unit_converter_objects {
 		return first.getText().equals("201,168,000");
 	}
 	public boolean verifysecond() {
-		return second.getText().equals("201,168");
+		return second.getText().equals("201,16");
 	}
 	public boolean verifythird() {
-		return third.getText().equals("20,116.8");
+		return third.getText().equals("20,116.");
 	}
 }
