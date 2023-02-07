@@ -34,7 +34,7 @@ public class Base_class {
 		public void failed_test(String testMethodName, AndroidDriver driver) throws IOException {
 			Base_class.driver=driver;
 			Date d=new Date();
-			SimpleDateFormat sdf=new SimpleDateFormat("MM/DD/Y HH:mm:ss");
+			SimpleDateFormat sdf=new SimpleDateFormat("Y/MM/DD HH:mm:ss");
 			String date=sdf.format(d);
 			date=date.replace(':', '_');
 	    File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
