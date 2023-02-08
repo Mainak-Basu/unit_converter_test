@@ -26,15 +26,23 @@ public class Paystore_Objects{
       @AndroidFindBy(xpath="//android.view.View[@content-desc=\"Open\"]")
       public WebElement open;
       public void tap1() {
+    	  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(200));
+  		wait.until(ExpectedConditions.visibilityOf(searchbar));
     	  searchbar.click();
       }
       public void send() {
+    	  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(200));
+  		wait.until(ExpectedConditions.visibilityOf(textbox));
     	  textbox.sendKeys("unit converter");
       }
       public void tap2() {
+    	  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(200));
+  		wait.until(ExpectedConditions.visibilityOf(unitconverteroption));
     	  unitconverteroption.click();
       }
       public void tap3() {
+    	  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(200));
+  		wait.until(ExpectedConditions.visibilityOf(install));
     	  install.click();
       }
       

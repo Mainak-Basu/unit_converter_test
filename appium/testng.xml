@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
-	  <classes>
-		  <class name ="tests.Test_Play_Store_and_unit_converter"/>
-	  </classes>
+    <classes>
+      <class name="tests.Test_Play_Store_and_unit_converter"/>
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
